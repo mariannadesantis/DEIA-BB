@@ -22,8 +22,8 @@ formatSpec = '%3.0d & %3.0d & %8.2f & %8.2f & %5.0d & %8.4f & %3.0d  & %8.4f  & 
 problem_name = 'SparseRandom';
 
 % Set parameters:
-n = 10; m = 15; k = 0.75; dens = 0.75; seed = 102135;
-param = [n,k,2,m,seed,dens];
+n = 10; m = 15; p = 2; k = 0.75; dens = 0.75; seed = 102135;
+param = [n,k,p,m,seed,dens];
 [time,nodes,width,cardL,SetU] = CallTest_DEIABB(param,problem_name);
 fprintf(fileID,formatSpec,n,m,k,dens,seed,time,nodes,width,cardL);
 
