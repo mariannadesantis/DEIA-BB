@@ -76,7 +76,7 @@ else
     gamma = 0.01;
     lnot = 1;
     itl = 1;
-    epsm = 10^(-24);
+    epsm = 10^(-8);
     fail = epsm * max(norm(xn,2),10^(-6))/max(1,norm(dd,2));
     while(lnot)
         % Trial point:
@@ -89,7 +89,7 @@ else
             alpha = beta*alpha;
         end
         if (alpha < fail)
-            disp('linesearch failure');
+            %disp('linesearch failure');
             %pause
             x1(nact)= z;
             xp = x1;
